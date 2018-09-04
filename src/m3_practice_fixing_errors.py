@@ -36,7 +36,7 @@ import math
 
 def main():
     """ Calls the other functions in this module to demo them. """
-    print_math()
+    print_math(4,5)
     turtle_fun()
 
 
@@ -46,7 +46,7 @@ def print_math(x,y):
     print(x)
 
     y = math.sin(math.pi)
-    print('the sign of pi is' + y)
+    print(y)
 
 
 
@@ -62,9 +62,9 @@ def turtle_fun():
     alan.pen = rg.Pen('blue', 30)
     alan.paint_bucket = rg.PaintBucket('yellow')
 
-    alan.back(3 * (47 + 16))
+    alan.backward(3 * (47 + 16))
     alan.begin_fill()
-    alan.circle(25)
+    alan.draw_circle(25)
     alan.end_fill()
 
     alan.forward(200)
