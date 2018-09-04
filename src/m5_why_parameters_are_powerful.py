@@ -1,8 +1,8 @@
 """
 This module lets you experience the POWER of FUNCTIONS and PARAMETERS.
 Authors: David Mutchler, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues Lucus Bendzsa.
+"""  # Done 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -19,8 +19,10 @@ def main():
     # When the _TODO_s ask you to test YOUR code, comment-out the following
     # two statements and add calls to   better_draw_circles   et al as needed.
     # -------------------------------------------------------------------------
-    draw_circles(rg.Point(100, 50))
-    draw_circles(rg.Point(-200, 0))
+    #draw_circles(rg.Point(100, 50))
+    #raw_circles(rg.Point(-200, 0))
+    better_draw_circles(-100, 50, 3)
+    better_draw_circles(100, 50, 3)
 
     window.update()
     window.close_on_mouse_click()
@@ -28,7 +30,7 @@ def main():
 
 ###############################################################################
 #
-# TODO: 2.
+# DOne: 2.
 #   First, RUN this program.  You will see that it draws concentric circles
 #   whose radii vary by 15.
 #
@@ -120,14 +122,14 @@ def draw_circles(point):
 # ###############################################################################
 
 
-def better_draw_circles(point):
+def better_draw_circles(pointx, pointy, radi):
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
     """
     turtle = rg.SimpleTurtle()
     turtle.pen_up()
-    turtle.go_to(point)
+    turtle.go_to(pointx, pointy)
     turtle.set_heading(0)  # Point "east" (towards the right)
 
     for k in range(1, 11):  # k becomes 1, 2, 3, ... 10
@@ -140,7 +142,7 @@ def better_draw_circles(point):
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(15 * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(radi * k)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
