@@ -83,9 +83,10 @@ def main():
 
     turtle3('red', 40)
     try_methods()
-    try_functions(200,100)
-    try_functions(100,200)
-    try_functions(-50,50)
+    try_functions(200, 100)
+    try_functions(100, 200)
+    try_functions(-50, 50)
+    try_methods_and_functions()
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
     ###########################################################################
@@ -144,7 +145,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
     old_speed = my_turtle.speed
     my_turtle.speed = 10
 
-    for _ in range(number_of_squares):
+    for k in range(number_of_squares):
         my_turtle.draw_square(size)
         my_turtle.left(twist)
 
@@ -208,7 +209,7 @@ def try_functions(x, y):
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DOne: 4. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #    NOTE: This function requires
@@ -217,9 +218,9 @@ def try_functions(x, y):
     #    HINT: see   jump_and_move_turtle   above.
     #
     ###########################################################################
-    bert = rg.SimpleTurtle
-    bert.go_to(x, y)
-    return
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200,0,0)
+    jump_and_move_turtle(-50,50,100,100)
 
 
 
@@ -256,16 +257,38 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    python = rg.SimpleTurtle()
+    python.Pen = rg.Pen('blue', 5)
+    python.pen.color = 'blue'
+    python.pen.thickness = 5
+    python.speed = 1
+    python.backward(150)
+    draw_many_squares(python, 2, 100, 30)
+    python.speed = 5
+    draw_many_squares(python, 10, 50, 15)
+    python.speed = 100
+    python.Pen.thickness = 35
+    draw_many_squares(python, 8, 300, 60)
+    python.Pen = rg.Pen('black', 3)
+    python.pen.thickness = 3
+    python.pen.color = 'black'
+    python.backward(200)
+    python.draw_circle(30)
+    python.draw_square(50)
 
-    python = rg.SimpleTurtle
-    python.Pen('blue', 5)
-    python.speed(1)
+
+
+
+
+
+
+
 
 
 
 
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # Done: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
